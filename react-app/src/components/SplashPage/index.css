@@ -1,7 +1,9 @@
 /* .splash-page {
     display: block;
-    position: relative;
-}
+    position: absolute;
+    height: fit-content;
+
+} */
 
 .image-container {
     position: relative;
@@ -9,7 +11,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-} */
+}
 html,
 body {
     top: 0;
@@ -24,12 +26,12 @@ body {
 .splash-image1 {
     position: relative;
     display: flex;
-    height: 60%;
-    background-image: url("https://i.postimg.cc/DZCX6HR7/discord-gaming-community-vector-8bj6he46773yglph-8bj6he46773yglph.jpg");
-    background-position: center;
+    height: 70%;
+    background-image: url("https://i.postimg.cc/zGsYzKpF/discord-gaming-community-vector-8bj6he46773yglph-8bj6he46773yglph.jpg");
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
 }
 
@@ -62,12 +64,13 @@ body {
 .splash-image2 {
     position: relative;
     display: flex;
-    height: 50%;
-    background-image: url("https://images.hdqwalls.com/wallpapers/morning-on-the-river-anime-4k-rk.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    justify-content: center;
+    height: 70%;
+    background-image: url("https://i.postimg.cc/2S0xRLNj/d3b595e818be59546978adabf806c24c.png"), url("https://i.postimg.cc/J4qNZHn3/34851e67d503c8bb6fbec4ffad5a12fa.png");
+    background-position: bottom left, bottom right;
+    background-color: rgb(255, 255, 255);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 30%, 30%;
+    /* justify-content: center; */
     flex-direction: column;
 }
 
@@ -96,12 +99,12 @@ body {
 .splash-image3 {
     position: relative;
     display: flex;
-    height: 50%;
-    background-image: url("https://cutewallpaper.org/21/anime-backgrounds-4k/Wallpaper-4k-Japan-Anime-Sky-4k-wallpapers-anime-wallpapers-.jpg");
-    background-position: center;
+    height: 70%;
+    background-image: url("https://theme.zdassets.com/theme_assets/678183/b7e9dce75f9edb23504e13b4699e208f204e5015.png");
+    background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    justify-content: center;
+    background-size: cover;
+    /* justify-content: center; */
     flex-direction: column;
 }
 
@@ -129,9 +132,10 @@ body {
 .splash-image4 {
     position: relative;
     display: flex;
-    height: 50%;
-    background-image: url("https://free4kwallpapers.com/uploads/originals/2022/03/28/anime-landscape-for-desktop-scenery-clouds-stars-buildings-wallpaper.jpg");
-    background-position: center;
+    height: 70%;
+    background-image: url("https://i.postimg.cc/XY0x36Pq/850c7612116999490846136e772ab7fd-1.png");
+    background-position: bottom;
+    background-color: rgb(155, 130, 250);
     background-repeat: no-repeat;
     background-size: 100% auto;
     justify-content: center;
@@ -163,11 +167,12 @@ body {
 .splash-image5 {
     position: relative;
     display: flex;
-    height: 50%;
-    background-image: url("https://wallpapercave.com/wp/wp6357796.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+    height: 70%;
+    background-image: url("https://i.postimg.cc/rwXdP8Pn/63495c4907d2bd0ac38fb771-Group-482479.png"), url("https://i.postimg.cc/pT6rYxjB/63495c5f446cd73f82366c8f-Group-482480.png");
+    background-position: right, left;
+    background-repeat: no-repeat, no-repeat;
+    background-color: rgb(90, 75, 230);
+    background-size: contain, contain;
     flex-direction: column;
 }
 
@@ -195,11 +200,11 @@ body {
 .splash-image6 {
     position: relative;
     display: flex;
-    height: 25%;
-    background-image: url("https://wallpapercave.com/wp/wp10348248.jpg");
+    height: 70%;
+    background-image: url("https://assets-global.website-files.com/5f9072399b2640f14d6a2bf4/634dde89272560563ac10898_2022_Q3_AppDirectory_Admin_HeroBanner_1800x720.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     justify-content: center;
     flex-direction: column;
 }
