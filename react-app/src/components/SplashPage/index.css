@@ -26,7 +26,7 @@ body {
 .splash-image1 {
     position: relative;
     display: flex;
-    height: 70%;
+    height: 650px;
     background-image: url("https://i.imgur.com/1wdsDDh.jpeg");
     background-position: bottom;
     background-repeat: no-repeat;
@@ -35,13 +35,12 @@ body {
     flex-direction: column;
 }
 
-.splash-image1>h1 {
-    color: white;
-    font-weight: 1000px;
-    line-height: 95%;
+.splash-image1> div {
+    color: rgb(255, 255, 255);
+    font-weight:900;
+    font-size: 60px;
+    margin-top: 10%;
     text-transform: uppercase;
-    text-rendering: geometricPrecision;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -50,172 +49,158 @@ body {
 
 .splash-image1>p {
     color: white;
-    display: flex;
-    justify-content: center;
+    width: 40%;
+    font-size: 25px;
     align-self: center;
-    flex-direction: column;
-    margin-left: 10%;
-    margin-right: 10%;
+    text-align: center;
 }
 
 
 .splash-image2 {
     position: relative;
     display: flex;
-    height: 70%;
+    height: 650px;
     background-image: url("https://i.imgur.com/pZP0aHU.png"), url("https://i.imgur.com/IrujwSf.png");
     background-position: bottom left, bottom right;
     background-color: rgb(255, 255, 255);
     background-repeat: no-repeat, no-repeat;
     background-size: 30%, 30%;
-    /* justify-content: center; */
     flex-direction: column;
+    align-items: center;
 }
 
 .splash-image2>h1 {
-    color: white;
-    font-weight: 1000px;
-    line-height: 95%;
+    color: rgb(57, 57, 57);
     text-rendering: geometricPrecision;
-    text-align: center;
-    text-shadow: 4px 4px 4px black;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 10%;
+    /* text-align: center; */
+    font-size: 40px;
+    margin-top: 8%;
+    width: 30%;
+
 }
 
 .splash-image2>p {
-    color: white;
-    text-shadow: 4px 4px 4px black;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    margin-right: 10%;
-    margin-left: 50%;
+    color: rgb(57, 57, 57);
+    font-size: 25px;
+    width: 30%;
 }
 
 .splash-image3 {
     position: relative;
     display: flex;
-    height: 70%;
+    height: 650px;
     background-image: url("https://i.imgur.com/3lb1udA.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    /* justify-content: center; */
     flex-direction: column;
+
+    /* align-items: center; */
 }
 
 .splash-image3>h1 {
     color: white;
-    font-weight: 1000px;
-    line-height: 95%;
-    text-rendering: geometricPrecision;
-    text-align: center;
-    text-shadow: 4px 4px 4px black;
-    display: flex;
-    justify-content: flex-start;
+    margin-top: 5%;
+    font-size: 40px;
     margin-left: 10%;
+    text-rendering: geometricPrecision;
+    text-align: left;
+    line-height: 70%;
+
 }
 
 .splash-image3>p {
     color: white;
-    text-shadow: 4px 4px 4px black;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10%;
-    margin-right: 50%;
+    width: 30%;
+    font-size: 25px;
+    margin-left: 42%;
+
 }
 
 .splash-image4 {
     position: relative;
     display: flex;
-    height: 70%;
+    height: 650px;
     background-image: url("https://i.imgur.com/fBRzsFi.png");
     background-position: bottom;
     background-color: rgb(155, 130, 250);
     background-repeat: no-repeat;
     background-size: 100% auto;
-    justify-content: center;
     flex-direction: column;
 }
 
 .splash-image4>h1 {
+    margin-top: 7%;
     color: white;
-    font-weight: 1000px;
-    line-height: 95%;
+    line-height: 0%;
     text-rendering: geometricPrecision;
-    text-align: center;
-    text-shadow: 4px 4px 4px black;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 20%;
+    font-size: 40px;
+    margin-left: 10%;
 }
 
 .splash-image4>p {
     color: white;
-    text-shadow: 4px 4px 4px black;
     display: flex;
+    font-size: 25px;
+    width: 70%;
     justify-content: flex-end;
     flex-direction: column;
-    margin-right: 10%;
-    margin-left: 50%;
+    margin-left: 10%;
 }
 
 .splash-image5 {
     position: relative;
     display: flex;
-    height: 70%;
+    height: 650px;
     background-image: url("https://i.imgur.com/4J6yhuw.png"), url("https://i.imgur.com/fqpT2ao.png");
     background-position: right, left;
     background-repeat: no-repeat, no-repeat;
     background-color: rgb(90, 75, 230);
     background-size: contain, contain;
     flex-direction: column;
+    align-items: center;
 }
 
 .splash-image5>h1 {
     color: white;
-    font-weight: 1000px;
-    line-height: 95%;
+    font-size: 40px;
     text-rendering: geometricPrecision;
     text-align: center;
-    text-shadow: 4px 4px 4px black;
     display: flex;
+    width: 40%;
     justify-content: center;
+    margin-top: 10%;
 }
 
 .splash-image5>p {
     color: white;
-    text-shadow: 4px 4px 4px black;
     display: flex;
+    font-size: 25px;
+    width: 40%;
+    text-align: center;
     justify-content: center;
     flex-direction: column;
-    margin-right: 10%;
-    margin-left: 10%;
+
 }
 
 .splash-image6 {
     position: relative;
     display: flex;
-    height: 70%;
+    height: 650px;
     background-image: url("https://assets-global.website-files.com/5f9072399b2640f14d6a2bf4/634dde89272560563ac10898_2022_Q3_AppDirectory_Admin_HeroBanner_1800x720.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 
 .splash-image6>h1 {
     color: white;
-    font-weight: 1000px;
-    line-height: 95%;
     text-rendering: geometricPrecision;
     text-align: center;
-    text-shadow: 4px 4px 4px black;
     display: flex;
-    justify-content: center;
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-top: 3%;
+    font-size: 40px;
 }
