@@ -27,7 +27,7 @@ body {
     position: relative;
     display: flex;
     height: 70%;
-    background-image: url("https://i.postimg.cc/zGsYzKpF/discord-gaming-community-vector-8bj6he46773yglph-8bj6he46773yglph.jpg");
+    background-image: url("https://i.imgur.com/1wdsDDh.jpeg");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -42,16 +42,14 @@ body {
     text-transform: uppercase;
     text-rendering: geometricPrecision;
     text-align: center;
-    text-shadow: 4px 4px 4px black;
     display: flex;
     justify-content: center;
     align-self: center;
     position: static;
 }
 
-.splash-image1>h2 {
+.splash-image1>p {
     color: white;
-    text-shadow: 4px 4px 4px black;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -65,7 +63,7 @@ body {
     position: relative;
     display: flex;
     height: 70%;
-    background-image: url("https://i.postimg.cc/2S0xRLNj/d3b595e818be59546978adabf806c24c.png"), url("https://i.postimg.cc/J4qNZHn3/34851e67d503c8bb6fbec4ffad5a12fa.png");
+    background-image: url("https://i.imgur.com/pZP0aHU.png"), url("https://i.imgur.com/IrujwSf.png");
     background-position: bottom left, bottom right;
     background-color: rgb(255, 255, 255);
     background-repeat: no-repeat, no-repeat;
@@ -86,7 +84,7 @@ body {
     margin-right: 10%;
 }
 
-.splash-image2>h2 {
+.splash-image2>p {
     color: white;
     text-shadow: 4px 4px 4px black;
     display: flex;
@@ -100,7 +98,7 @@ body {
     position: relative;
     display: flex;
     height: 70%;
-    background-image: url("https://theme.zdassets.com/theme_assets/678183/b7e9dce75f9edb23504e13b4699e208f204e5015.png");
+    background-image: url("https://i.imgur.com/3lb1udA.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -120,7 +118,7 @@ body {
     margin-left: 10%;
 }
 
-.splash-image3>h2 {
+.splash-image3>p {
     color: white;
     text-shadow: 4px 4px 4px black;
     display: flex;
@@ -133,7 +131,7 @@ body {
     position: relative;
     display: flex;
     height: 70%;
-    background-image: url("https://i.postimg.cc/XY0x36Pq/850c7612116999490846136e772ab7fd-1.png");
+    background-image: url("https://i.imgur.com/fBRzsFi.png");
     background-position: bottom;
     background-color: rgb(155, 130, 250);
     background-repeat: no-repeat;
@@ -154,7 +152,7 @@ body {
     margin-right: 20%;
 }
 
-.splash-image4>h2 {
+.splash-image4>p {
     color: white;
     text-shadow: 4px 4px 4px black;
     display: flex;
@@ -168,7 +166,7 @@ body {
     position: relative;
     display: flex;
     height: 70%;
-    background-image: url("https://i.postimg.cc/rwXdP8Pn/63495c4907d2bd0ac38fb771-Group-482479.png"), url("https://i.postimg.cc/pT6rYxjB/63495c5f446cd73f82366c8f-Group-482480.png");
+    background-image: url("https://i.imgur.com/4J6yhuw.png"), url("https://i.imgur.com/fqpT2ao.png");
     background-position: right, left;
     background-repeat: no-repeat, no-repeat;
     background-color: rgb(90, 75, 230);
@@ -187,7 +185,7 @@ body {
     justify-content: center;
 }
 
-.splash-image5>h2 {
+.splash-image5>p {
     color: white;
     text-shadow: 4px 4px 4px black;
     display: flex;
