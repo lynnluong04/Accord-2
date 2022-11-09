@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Redirect, useHistory } from 'react-router-dom';
 import NavBar from '../NavBar';
 import './index.css'
 
 function SplashPage() {
     const user = useSelector(state => state.session.user);
-
+    const history = useHistory();
     if (user) {
         return <Redirect to='/channels/@me' />
     }
@@ -58,6 +58,7 @@ function SplashPage() {
                     <h1>
                         Ready to start your journey?
                     </h1>
+                    <button className='join' onClick={() => history.push('/sign-up')} >Join Accord</button>
                 </div>
             </div>
         </div>

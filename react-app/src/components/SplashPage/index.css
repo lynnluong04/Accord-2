@@ -189,7 +189,7 @@ body {
     display: flex;
     height: 650px;
     background-image: url("https://assets-global.website-files.com/5f9072399b2640f14d6a2bf4/634dde89272560563ac10898_2022_Q3_AppDirectory_Admin_HeroBanner_1800x720.png");
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     flex-direction: column;
@@ -203,4 +203,19 @@ body {
     display: flex;
     margin-top: 3%;
     font-size: 40px;
+}
+
+.join {
+    height: 55px;
+    width: 170px;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(33, 85, 255);
+}
+
+.join:hover {
+    background-color: rgb(31, 122, 251);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
