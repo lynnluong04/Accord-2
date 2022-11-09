@@ -48,7 +48,7 @@ function SplashPage() {
                 </div>
                 <div className='splash-image5'>
                     <h1>
-                        RELIABLE TECH FOR STAYING CLOSE
+                        Reliable tech for staying close
                     </h1>
                     <p>
                         Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.

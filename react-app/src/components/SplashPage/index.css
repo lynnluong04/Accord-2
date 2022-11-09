@@ -165,10 +165,11 @@ body {
 .splash-image5>h1 {
     color: white;
     font-size: 40px;
-    text-rendering: geometricPrecision;
+    /* text-rendering: geometricPrecision;
+    text-transform: capitalize; */
     text-align: center;
     display: flex;
-    width: 40%;
+    width: 50%;
     justify-content: center;
     margin-top: 10%;
 }
