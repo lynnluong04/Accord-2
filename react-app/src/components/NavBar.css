@@ -4,7 +4,7 @@
     justify-content: space-between;
     /* border: 1px solid red; */
     /* margin: .5em auto; */
-    background-color: rgb(64, 58, 255);
+    background-color: rgb(50, 93, 235);
     margin: 0;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -64,28 +64,32 @@
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 500;
-    transition-property: text-decoration;
+    transition: text-decoration ease-in-out 2s;
+  
 }
 
 .splash-discover:hover {
     text-decoration: underline 1px solid white;
+    /* transition-timing-function: ease-in-out;
+    transition-duration: 2s; */
 }
 
 .log-in-splash-btn {
     background-color: white;
     height: 35;
-    border-radius: 15px;
-    width: 60px;
+    border-radius: 40px;
+    width: 80px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .log-in-splash-btn:hover {
     cursor: pointer;
-    background-color: rgb(39, 132, 195);
-    color: white;
-
+    color:  rgb(50, 93, 235);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transition-timing-function: ease-in-out;
+    transition-duration: .2s;
 }
 
 .form-misc {
