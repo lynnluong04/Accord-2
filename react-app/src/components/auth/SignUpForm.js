@@ -22,7 +22,7 @@ const SignUpForm = () => {
         .catch(async (res) => {
           const data = await res.json();
           if (data && data.errors) setErrors(data.errors);
-      })
+        })
       // const data = await dispatch(signup(username, email, password));
       // if (data) {
       //   setErrors(data)
@@ -52,54 +52,36 @@ const SignUpForm = () => {
 
   return (
     <div className='signup-container'>
-      
+
       <form className='signup-form-div' onSubmit={onSignUp}>
-        <div>
-          {errors.map((error, ind) => (
-            <div key={ind}>{error}</div>
-          ))}
+
+        <div className='signup-title'>
+          <h2> Create an account </h2>
         </div>
-        <div>
-          <h2>
-            Create an account
-          </h2>
-        </div>
-        <div className='shift-right'>
+
+        <div className='signup-inputs' >
           <label>User Name</label>
-          <div className='shift-right'>
-            <input
-              type='text'
-              name='username'
-              onChange={updateUsername}
-              value={username}
-            ></input>
-          </div>
-        </div>
-        <div className='shift-right'>
+          <input
+            type='text'
+            name='username'
+            onChange={updateUsername}
+            value={username}
+          ></input>
           <label>Email</label>
-          <div className='shift-right'>
           <input
             type='text'
             name='email'
             onChange={updateEmail}
             value={email}
           ></input>
-          </div>
-        </div>
-        <div className='shift-right'>
           <label>Password</label>
-          <div className='shift-right'>
           <input
             type='password'
             name='password'
             onChange={updatePassword}
             value={password}
           ></input>
-          </div>
-        </div>
-        <div className='shift-right'>
           <label>Repeat Password</label>
-          <div className='shift-right'>
           <input
             type='password'
             name='repeat_password'
@@ -107,14 +89,17 @@ const SignUpForm = () => {
             value={repeatPassword}
             required={true}
           ></input>
-          </div>
-          <div>
-            <button className='signup-button' type='submit'>Sign Up</button>
-          </div>
         </div>
-      <div className='have-an-account'>Already have an account?
-        <LoginFormDiscoverModal />
-      </div>
+        <button className='signup-button' type='submit'>Sign Up</button>
+        <div >
+          {errors.map((error, ind) => (
+            <div key={ind}>{error}</div>
+          ))}
+        </div>
+        <div className='have-an-account'>
+          Already have an account?
+          <LoginFormDiscoverModal />
+        </div>
       </form>
     </div>
   );

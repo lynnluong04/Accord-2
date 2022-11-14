@@ -41,17 +41,7 @@ body {
     cursor: pointer;
 }
 
-.login-here-button {
-    background-color: rgb(39, 132, 195);
-    color: white;
-    border-radius: 5px;
-    font-size: 20px;
-}
 
-.login-here-button:hover {
-    cursor: pointer;
-    background-color: rgb(18, 117, 183);
-}
 
 
 /* .button::after {
