@@ -54,9 +54,13 @@ const SignUpForm = () => {
     <div className='signup-container'>
 
       <form className='signup-form-div' onSubmit={onSignUp}>
-
+      <div className='signup-errors' >
+          {errors.map((error, ind) => (
+            <div key={ind}>{error}</div>
+          ))}
+        </div>
         <div className='signup-title'>
-          <h2> Create an account </h2>
+          <h2 className='signup-title'> Create an account </h2>
         </div>
 
         <div className='signup-inputs' >
@@ -91,11 +95,7 @@ const SignUpForm = () => {
           ></input>
         </div>
         <button className='signup-button' type='submit'>Sign Up</button>
-        <div >
-          {errors.map((error, ind) => (
-            <div key={ind}>{error}</div>
-          ))}
-        </div>
+
         <div className='have-an-account'>
           Already have an account?
           <LoginFormDiscoverModal />

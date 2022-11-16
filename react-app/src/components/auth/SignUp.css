@@ -18,21 +18,47 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: fit-content;
     flex-shrink: 0;
+    background-color: rgb(55, 57, 62);
+    padding: 20px 20px;
+    border-radius: 5px;
 }
+
+
 .signup-inputs {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+}
+h2.signup-title {
+    font-size: 25px;
+    margin-top: 0;
 }
 
 .signup-inputs > input {
     margin-bottom: 10px;
+    background-color: rgb(32, 34, 37);
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    height: 30px;
+    color: lightgray;
 }
+
+input:focus {
+outline: none;
+}
+
 .signup-inputs > label {
     margin-bottom: 5px;
+    font-size: 16px;
+    color: lightgray;
+
+
 }
 
 .signup-button {
@@ -42,6 +68,8 @@
     border-radius: 5px;
     padding: 8px;
     margin-top: 10px;
+    font-size: 16px;
+
 }
 
 .signup-button:hover {
@@ -51,17 +79,27 @@
 
 
 .have-an-account {
-    margin-top: 10%;
+    margin-top: 10px;
+    font-size: 16px;
 }
 
 .login-here-button {
     color: rgb(72, 255, 167);
     margin-left: 5px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 16px;
+
 }
 
 .login-here-button:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+
+.signup-errors {
+    font-size: 14px;
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-decoration: dotted;
 }
