@@ -18,7 +18,7 @@ const ChannelChat = () => {
   // console.log('chatHistory useSelector: ', chatHistory);
 
 
-  const { channelId, serverId } = useParams()
+  const { channelId } = useParams()
   const channels = useSelector(state => state.channels);
   const channel = channels[channelId]
   // console.log('channel: ', channel)
@@ -40,9 +40,11 @@ const ChannelChat = () => {
     setValidationErrors(errors);
   }, [chatInput]);
 
-  useEffect(async () => {
+  useEffect(() => {
 
-    if (channelId) await dispatch(loadLiveChatHistory(channelId));
+   ( async()=> {
+      if (channelId) await dispatch(loadLiveChatHistory(channelId));
+    })();
 
     // create websocket
     socket = io();

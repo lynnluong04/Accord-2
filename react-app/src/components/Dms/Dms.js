@@ -69,11 +69,12 @@ const DmChat = () => {
     }, [chatInput]);
 
 
-    useEffect(async () => {
-        await dispatch(loadDMHistory(sessionUser.id, recipientId));
+    useEffect(() => {
+        (async () => {
+            await dispatch(loadDMHistory(sessionUser.id, recipientId));
+        })();
         // create websocket
         socket = io();
-
 
         // if (socket && recipient && sessionUser) socket.emit("dm_join", {username: sessionUser.username, recipient: recipientId, sender:sessionUser.id })
         if (socket && recipientId && sessionUser) socket.emit("dm_join", { username: sessionUser.username, dm_room_id: roomId })

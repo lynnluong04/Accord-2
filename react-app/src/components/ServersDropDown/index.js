@@ -12,16 +12,16 @@ const ServerNameDropDown = () => {
     const dispatch = useDispatch();
     const history = useHistory();
     const { serverId } = useParams();
-    console.log(serverId)
-    
+    // console.log(serverId)
+
     const serversObj = useSelector(state => state?.servers['user-servers']);
     const serversList = serversObj ? Object.values(serversObj) : null
-    
-    console.log(serversList)
+
+    // console.log(serversList)
     let server = serversList?.filter(server => server.id === Number(serverId))
     server = server ? server[0] : null
-    console.log(server)
-  
+    // console.log(server)
+
     // useEffect(() => {
     //     if (!showMenu) return;
     // }, [showMenu]);
