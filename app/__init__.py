@@ -84,3 +84,6 @@ def react_root(path):
 
 if __name__ == '__main__':
     socketio.run(app)
+
+
+# This is to test deploy on render
