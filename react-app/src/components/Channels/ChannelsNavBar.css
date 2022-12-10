@@ -187,7 +187,7 @@ button.edit-channel-btn {
     color: lightgray;
     position: absolute;
     /* top: 10rem; */
-    left: 14.5rem;
+    /* left: 14.5rem; */
     z-index: -1000000;
     font-size: 18px;
 }
@@ -203,7 +203,7 @@ button.edit-channel-btn {
     position: fixed;
     bottom: 0;
     width: 256px;
-    left: 8rem;
+    left: 6.4rem;
 
 }
 
