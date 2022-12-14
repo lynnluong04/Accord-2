@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import * as sessionActions from "../../store/session";
 import { useHistory } from "react-router-dom";
 
-function DemoUser() {
+function DemoUser({notHome}) {
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -18,7 +18,7 @@ function DemoUser() {
   }
 
   return (
-    <button className='log-in-splash-btn' onClick={handleDemoUser}>Demo</button>
+    <button className={notHome? 'home-demo': 'log-in-splash-btn'} onClick={handleDemoUser}>Demo</button>
   )
 }
 

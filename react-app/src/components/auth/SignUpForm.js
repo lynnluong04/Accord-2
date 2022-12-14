@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom';
 import { signup } from '../../store/session';
+import DemoUser from '../LoginFormModal/DemoUser';
 import LoginFormDiscoverModal from './LoginFormDiscoverModal';
 import './SignUp.css';
 
@@ -99,6 +100,7 @@ const SignUpForm = () => {
         <div className='have-an-account'>
           Already have an account?
           <LoginFormDiscoverModal />
+
         </div>
       </form>
     </div>

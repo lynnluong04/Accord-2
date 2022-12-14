@@ -1,3 +1,17 @@
 .close-button {
     padding-bottom: 20px;
 }
+
+.home-demo {
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(89, 209, 151);
+    border-radius: 5px;
+    background-color: rgb(89, 209, 151);
+    width: fit-content;
+    color: white;
+}
+
+.home-demo:hover {
+    background-color: rgb(97, 227, 164);
+}
