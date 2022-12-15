@@ -6,10 +6,10 @@
     height: 100vh;
     margin: 0;
     padding: 0;
-    width: 16rem;
+    width: 260px;
     align-items: center;
     position: fixed;
-    left:8rem;
+    left: 128px;
 }
 
 .channel-server-div {
