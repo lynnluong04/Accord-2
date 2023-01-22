@@ -7,10 +7,7 @@ function LoginFormModal() {
     const [showModal, setShowModal] = useState(false);
 
     const handleClose = () => setShowModal(false);
-    // const onLoginFormSubmit = e => {
-    //     e.preventDefault();
-    //     handleClose();
-    // }
+
 
     return (
         <>
