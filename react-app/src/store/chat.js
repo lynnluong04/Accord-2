@@ -63,28 +63,21 @@ export const loadDMHistory = (senderId, recipientId) => async dispatch => {
 
   // fetching all the dms the sender & recipient have sent to anyone
   const senderRes = await fetch(`/api/chat/dms/${senderId}`);
-  // console.log("loadDMHistory thunk, senderRes before senderRes.ok:", senderRes)
   const recipientRes = await fetch(`/api/chat/dms/${recipientId}`);
-  // console.log("loadDMHistory thunk, recipientRes before recipientRes.ok:", recipientRes)
 
   if (senderRes.ok && recipientRes.ok) {
     const senderList = await senderRes.json()
-    // console.log('loadDMHistory thunk, senderList', senderList)
-    // console.log('loadDMHistory thunk, senderList.dm_messages', senderList.dm_messages)
     const recipientList = await recipientRes.json()
-    // console.log('loadDMHistory thunk, recipientList', recipientList)
 
     // all the dms the sender has sent to the recipient
     const sendList = senderList.dm_messages.filter(message => {
       return message['recipient_id'] === recipientId;
     })
-    // console.log('loadDMHistory thunk, sendList', sendList)
 
     // all the dms the recipient has sent to the sender
     const recList = recipientList.dm_messages.filter(message => {
       return message['recipient_id'] === senderId;
     })
-    // console.log('loadDMHistory thunk, recList', recList)
 
     // spreading the dm objects into a list array, then sorting that list by dm id
     const list = [...sendList, ...recList];

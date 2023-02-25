@@ -29,15 +29,6 @@ const DmChat = () => {
     const dmHistoryObj = useSelector(state => state['chat']['dm-messages']);
     const dmHistory = dmHistoryObj ? Object.values(dmHistoryObj) : null;
 
-    // const privateHistory = dmHistory?.filter(message => {
-    //     return (message['sender_id'] === sessionUser.id || message['recipient_id'] === sessionUser.id) &&
-    //             (message['sender_id'] === recipientId || message['recipient_id'] === recipientId)
-    // })
-
-
-    // console.log('DM HISTORY', dmHistory)
-
-    // console.log("PRIVATE HISTORY", privateHistory)
 
     useEffect(() => {
         async function fetchData() {
@@ -47,11 +38,6 @@ const DmChat = () => {
         }
         fetchData();
     }, [])
-
-
-    // const recipient = users.filter(user => {
-    //     return user.id === Number(recipientId)
-    // })
 
 
     // putting the sessionUser id and recipient id into a combined string to make a unique room
