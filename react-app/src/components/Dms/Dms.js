@@ -19,12 +19,10 @@ const DmChat = () => {
     let recipientId = Number(userId)
 
     const sessionUser = useSelector(state => state.session.user);
-    // console.log('users', users)
     const recipient = users?.filter(user => {
         return user.id === recipientId
     })[0];
 
-    // console.log('recipient', recipient)
 
     const dmHistoryObj = useSelector(state => state['chat']['dm-messages']);
     const dmHistory = dmHistoryObj ? Object.values(dmHistoryObj) : null;
@@ -56,31 +54,31 @@ const DmChat = () => {
 
 
     useEffect(() => {
-        (async () => {
-            await dispatch(loadDMHistory(sessionUser.id, recipientId));
-        })();
         // create websocket
         socket = io();
 
-        // if (socket && recipient && sessionUser) socket.emit("dm_join", {username: sessionUser.username, recipient: recipientId, sender:sessionUser.id })
-        if (socket && recipientId && sessionUser) socket.emit("dm_join", { username: sessionUser.username, dm_room_id: roomId })
+        // Join the room once upon mounting or when the recipientId changes.
+        if (recipientId && sessionUser) {
+            socket.emit("dm_join", { username: sessionUser.username, dm_room_id: roomId });
+        }
 
+        // Listen for chat events
+        const handleNewMessage = (chat) => {
+            setMessages((messages) => [...messages, chat]);
+        };
 
-        //listen for chat events
-        socket.on('dm_chat', chat => {
-            // when receive a chat, add to messages state var
-            setMessages(messages => [...messages, chat]);
-            // console.log('chat in socket.on(dm_chat):', chat)
-        })
+        socket.on('dm_chat', handleNewMessage);
 
-        //when component unmounts, disconnect
-        return (() => {
-            // socket.removeAllListeners()
+        // Load DM history once upon mounting or when the recipientId changes.
+        dispatch(loadDMHistory(sessionUser.id, recipientId));
+
+        // Cleanup function for when the component unmounts or when the recipientId changes.
+        return () => {
             socket.emit('dm_leave', { username: sessionUser.username, recipient: recipientId });
+            socket.off('dm_chat', handleNewMessage);
             socket.disconnect();
-            setMessages([]);
-        })
-    }, [recipientId, messages])
+        };
+    }, [recipientId, dispatch, sessionUser, roomId]);
 
     const updateChatInput = e => {
         setChatInput(e.target.value);
