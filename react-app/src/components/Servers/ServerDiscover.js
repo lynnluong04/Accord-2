@@ -51,7 +51,7 @@ export default function ServerDiscover() {
 
 
     return (
-        <div>
+        <>
             {!user && discoverComp}
             {user && (
                 <div className="discover-container">
@@ -79,6 +79,6 @@ export default function ServerDiscover() {
                     </div>
                 </div>
             )}
-        </div>
+        </>
     )
 }
