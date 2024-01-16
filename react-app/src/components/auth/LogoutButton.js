@@ -12,11 +12,11 @@ const LogoutButton = () => {
   };
 
   return (
-    <div>
+    <>
       <button className='logout-btn' onClick={onLogout}>
-        <i className="fa-solid fa-gear" id="logout-btn-gear"></i> 
+        <i className="fa-solid fa-gear" id="logout-btn-gear"></i>
       </button>
-    </div>
+    </>
   )
 };
 

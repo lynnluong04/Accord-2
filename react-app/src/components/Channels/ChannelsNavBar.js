@@ -73,7 +73,7 @@ const ChannelsNavBar = () => {
 
                 {channels && channels.map(channel => (
                     <ul className='single-channel-div' key={channel.id}>
-                        <div className='channels-box'>
+                        <div className='channels-box' >
                             <NavLink className={'channels'} to={`/channels/${serverId}/${channel.id}`}>
                                 <li className={!(Number(channelId)=== channel.id )? 'channel-name': 'selected-channel'} key={channel.id}># {channel.name}</li>
                             </NavLink>
@@ -81,7 +81,7 @@ const ChannelsNavBar = () => {
                         <EditChannelModal channel={channel} setChannelExists={setChannelExists} />
                     </ul>
                 ))}
-                <div className="display-user">
+                <div className="display-user-channel">
                     <h2 className='channel-username'>{user.username}</h2>
                     <LogoutButton />
                 </div>

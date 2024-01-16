@@ -41,7 +41,7 @@ function UsersList() {
         </div>
         <div className="display-user">
           <h2 className='channel-username'>{sessionUser.username}</h2>
-          <LogoutButton />
+          <LogoutButton/>
         </div>
       </div>
     </>

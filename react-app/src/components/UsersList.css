@@ -14,10 +14,11 @@
     height: 100%;
     width: 100%;
     font-size: 1.25rem;
+
 }
 
 .user-list, .selected-user {
-    margin: 0;
+    box-sizing: border-box;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -46,7 +47,7 @@
 
 .user-list:hover{
     background-color: rgb(52, 58, 64, 0.9);
-    width: 90%;
+    
     transition: all 1s ease;
     color: white;
 }
