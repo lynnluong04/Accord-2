@@ -41,31 +41,37 @@ const ChannelChat = () => {
   }, [chatInput]);
 
   useEffect(() => {
+    // Load chat history
+    if (channelId) {
+      dispatch(loadLiveChatHistory(channelId));
+    }
 
-   ( async()=> {
-      if (channelId) await dispatch(loadLiveChatHistory(channelId));
-    })();
-
-    // create websocket
+    // Initialize WebSocket connection
     socket = io();
 
-    // console.log('channel IN CHANNELCHAT: ', channel.id)
-    if (socket && channel) socket.emit('join', { username: user.username, channel: channel.id })
+    // Join the channel
+    if (channel) {
+      socket.emit('join', { username: user.username, channel: channel.id });
+    }
 
-    //listen for chat events
-    socket.on('chat', chat => {
-      // when receive a chat, add to messages state var
-      setMessages(messages => [...messages, chat]);
-    })
+    // Function to handle new chat messages
+    const handleNewMessage = (chat) => {
+      setMessages((currentMessages) => [...currentMessages, chat]);
+    };
 
-    //when component unmounts, disconnect
-    return (() => {
-      // socket.removeAllListeners()
-      socket.emit('leave', { username: user.username, channel: channel?.id })
-      socket.disconnect()
-      setMessages([]);
-    })
-  }, [channelId, messages])
+    // Set up event listener for new chat messages
+    socket.on('chat', handleNewMessage);
+
+    // Cleanup function to run when the component unmounts or channelId changes
+    return () => {
+      if (channel) {
+        socket.emit('leave', { username: user.username, channel: channel.id });
+        socket.off('chat', handleNewMessage); // Properly remove the event listener
+      }
+      socket.disconnect(); // Disconnect the WebSocket
+      setMessages([]); // Reset messages state if needed
+    };
+  }, [channelId, dispatch, user.username, channel]);
 
 
   const updateChatInput = e => {
