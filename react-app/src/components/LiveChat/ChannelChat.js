@@ -107,7 +107,7 @@ const ChannelChat = () => {
 
 
   return (user && (
-    <div className='channel-chat-container'>
+    <>
       <div className="chat-history-container">
         {chatHistory && chatHistory.map((message, idx) => (
           <div className='single-chat' key={idx}>
@@ -133,7 +133,7 @@ const ChannelChat = () => {
           />
         </form>
       </div>
-    </div>
+    </>
   ));
 }
 

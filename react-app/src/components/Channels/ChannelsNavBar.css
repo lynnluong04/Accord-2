@@ -1,15 +1,13 @@
 .channels-container {
+    width: 256px;
+    min-height: 100vh;
+    padding: 0;
     background-color: #495057;
     color: white;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    width: 260px;
     align-items: center;
-    position: fixed;
-    left: 128px;
+    align-items: center;
 }
 
 .channel-server-div {
@@ -200,11 +198,8 @@ button.edit-channel-btn {
 .display-user {
     background-color:  rgb(39, 132, 195);
     display: flex;
-    position: fixed;
     bottom: 0;
     width: 256px;
-    left: 6.4rem;
-
 }
 
 .channel-username {
@@ -229,4 +224,3 @@ button.logout-btn {
     font-family: Arial, Helvetica, sans-serif;
     content: "Logout";
 }
-

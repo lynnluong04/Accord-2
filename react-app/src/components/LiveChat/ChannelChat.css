@@ -1,16 +1,14 @@
 .live-chat-container {
+  min-height: 100vh;
+  min-width: 500px;
+  flex-grow: 1;
+  padding: .5em 2em;
+  overflow-y:scroll;
+  overflow-x: hidden;
   background-color: #6b7077;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  overflow-y:scroll;
-  height: 100%;
-  left: 19rem;
-  position: absolute;
-  margin:0;
-  width: 80%;
-  padding: .5em 2em;
-  padding-left: .2em;
 }
 
 
@@ -37,11 +35,11 @@
   }
 
 
-.channel-chat-container {
+/* .channel-chat-container {
   width: 78vw;
   padding-bottom: 1em;
   padding-left: 1em;
-  }
+  } */
 
   #channel-chat-form {
     margin-bottom: 5px;

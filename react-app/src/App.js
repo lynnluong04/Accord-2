@@ -33,6 +33,7 @@ function App() {
 
 
   return (
+    <div className='content'>
     <BrowserRouter>
       {/* <NavBar /> */}
       <Switch>
@@ -87,6 +88,7 @@ function App() {
 
       </Switch>
     </BrowserRouter>
+    </div>
   );
 }
 

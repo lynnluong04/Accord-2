@@ -2,20 +2,28 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 0.05em;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+}
+body, html {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #6b7077;
 }
 
 root {
-    display: flex;
-    flex-direction: row;
+    /* display: flex; */
+    /* flex-direction: row; */
     min-width: 100vw;
-    height: fit-content;
+    height: 100vh;
 }
 
-body {
-    height: fit-content;
-    min-width: 100%;
-    background-color: #6b7077;
+.content {
+    display: flex;
+    min-width: 100vw;
+    overflow-x: scroll;
+    overflow-y: auto;
+    /* flex-wrap: wrap;
+    flex: 1; */
 }
 
 .form {

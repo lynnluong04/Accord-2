@@ -61,7 +61,7 @@ const ChannelsNavBar = () => {
 
 
     return (
-        <div className="channels-nav-chat-container">
+        <>
             <div className='channels-container'>
                 <div className='server-name-in-channel-div'>
                     <ServerNameDropDown server={server} />
@@ -92,7 +92,7 @@ const ChannelsNavBar = () => {
                     <ChannelChat />
                 </div>
             )}
-        </div>
+        </>
 
     )
 }

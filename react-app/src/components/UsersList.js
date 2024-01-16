@@ -30,21 +30,21 @@ function UsersList() {
       <div className='direct-messages'>Direct Messages</div>
         <div className='user-box'>
           {usersList && usersList.map(user => (
-            <ul className={(Number(userId) === user.id)? 'selected-user':'user-list'} key={user.id}>
+            <div className={(Number(userId) === user.id)? 'selected-user':'user-list'} key={user.id}>
 
-              <div className='username-div' >
-                <NavLink to={`/channels/@me/${user.id}`} style={{ textDecoration: 'none' }}>
-                  <li className='userslist-username' key={user.id}>{user.username}</li>
+              {/* <div className='username-div' > */}
+                <NavLink to={`/channels/@me/${user.id}`} style={{ textDecoration: 'none' }} className="dm-user">
+                  <div className='userslist-username' key={user.id}>{user.username}</div>
                 </NavLink>
-              </div>
-            </ul>
+              {/* </div> */}
+            </div>
           ))}
+          {/* {chat && <DmChat />} */}
+        </div>
           <div className="display-user">
               <h2 className='channel-username'>{sessionUser.username}</h2>
               <LogoutButton />
           </div>
-          {/* {chat && <DmChat />} */}
-        </div>
       </div>
     </>
   );
